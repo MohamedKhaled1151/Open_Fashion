@@ -13,20 +13,30 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     bool isBlack=isBlackk;
     return Padding(
-      padding:  EdgeInsets.all(8.0),
+      padding:  EdgeInsets.all(8.0.r),
       child: AppBar(
         centerTitle: true,
         backgroundColor: isBlack ? AppColors.primary:Colors.white,
        leadingWidth:25.w ,
-       leading: SvgPicture.asset("assets/icons/Menu.svg",color:isBlack?Color(0xffF9F9F9):Colors.black,),
-        title: SvgPicture.asset("assets/logos/Logo.svg",color:isBlack? Color(0xffFFFFFF):Colors.black,),
+          leading: SvgPicture.asset(
+            "assets/icons/Menu.svg",
+            colorFilter: ColorFilter.mode(
+              isBlack ? Color(0xffF9F9F9) : Colors.black,
+              BlendMode.srcIn,
+            ),
+          ),
+
+        title: SvgPicture.asset("assets/logos/Logo.svg",colorFilter:ColorFilter.mode(
+            isBlack? Color(0xffFFFFFF):Colors.black,  BlendMode.srcIn)),
         actions: [
-          SvgPicture.asset("assets/icons/Search.svg",color:isBlack? Color(0xffF9F9F9):Colors.black,
+          SvgPicture.asset("assets/icons/Search.svg",colorFilter:ColorFilter.mode(
+              isBlack? Color(0xffF9F9F9):Colors.black, BlendMode.srcIn),
             height:24.h,
             width: 24.w,
           ),
           Gap(20.w),
-          SvgPicture.asset("assets/icons/shopping bag.svg",color:isBlack? Color(0xffF9F9F9):Colors.black,
+          SvgPicture.asset("assets/icons/shopping bag.svg",colorFilter:ColorFilter.mode(
+              isBlack? Color(0xffF9F9F9):Colors.black, BlendMode.srcIn),
            height: 24.h,
             width: 24.w,
           ),

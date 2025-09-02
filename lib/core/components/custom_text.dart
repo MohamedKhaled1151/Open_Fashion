@@ -9,12 +9,14 @@ class CustomText extends StatelessWidget {
   final FontWeight weight;
   final Color color;
   final int max;
+  final double  height ;
   const CustomText({super.key,
     required this.text,
      this.size=16,
      this.weight= FontWeight.normal,
      this.color= Colors.white,
      this.max=1,
+    this.height =1,
 
   });
 
@@ -23,6 +25,7 @@ class CustomText extends StatelessWidget {
     return  Text(text,
       maxLines: max,
       style: TextStyle(
+        height: height ,
           fontWeight: weight,
           fontSize: size.sp,
           fontFamily: "TenorSans",

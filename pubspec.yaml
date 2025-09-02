@@ -37,6 +37,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.2.0
   gap: ^3.0.1
+  ionicons: ^0.2.2
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,7 @@ flutter:
      - assets/logos/
      - assets/texts/
      - assets/products//
+     - assets/cavers//
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
