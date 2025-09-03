@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:open_fashion/features/screans/home/home.dart';
 
 import '../../core/components/colors/colors.dart';
 
@@ -18,11 +19,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         centerTitle: true,
         backgroundColor: isBlack ? AppColors.primary:Colors.white,
        leadingWidth:25.w ,
-          leading: SvgPicture.asset(
-            "assets/icons/Menu.svg",
-            colorFilter: ColorFilter.mode(
-              isBlack ? Color(0xffF9F9F9) : Colors.black,
-              BlendMode.srcIn,
+          leading: InkWell(
+            onTap: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Home()));
+            },
+            child: SvgPicture.asset(
+              "assets/icons/Menu.svg",
+              colorFilter: ColorFilter.mode(
+                isBlack ? Color(0xffF9F9F9) : Colors.black,
+                BlendMode.srcIn,
+              ),
             ),
           ),
 

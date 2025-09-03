@@ -22,31 +22,31 @@
       ProductModel(
           image: "assets/products/Rectangle 344 (1).png",
           name: "Octo ",
-          price: "120",
+          price: "100",
           description: "reversible angora cardigan",
          ),
       ProductModel(
           image: "assets/products/Rectangle 344 (2).png",
           name: "Octo ",
-          price: "120",
+          price: "150",
           description: "reversible angora cardigan",
           ),
       ProductModel(
           image: "assets/products/Rectangle 344 (3).png",
           name: "Octo",
-          price: "120",
+          price: "160",
           description: "reversible angora cardigan",
          ),
       ProductModel(
           image: "assets/products/Rectangle 344 (4).png",
           name: "Octo",
-          price: "120",
+          price: "100",
           description: "reversible angora cardigan",
          ),
       ProductModel(
           image: "assets/products/Rectangle 344 (5).png",
           name: "Octo",
-          price: "120",
+          price: "140",
           description: "reversible angora cardigan",
           ),
 

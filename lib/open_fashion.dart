@@ -12,6 +12,9 @@ class OpenFashion extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         debugShowCheckedModeBanner:false,
+        theme: ThemeData(
+          scaffoldBackgroundColor: Colors.white
+        ),
         home: Home() ,
       ),
     );

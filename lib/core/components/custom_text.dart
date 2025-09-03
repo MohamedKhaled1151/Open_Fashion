@@ -10,6 +10,8 @@ class CustomText extends StatelessWidget {
   final Color color;
   final int max;
   final double  height ;
+  final  double spacing;
+
   const CustomText({super.key,
     required this.text,
      this.size=16,
@@ -17,6 +19,7 @@ class CustomText extends StatelessWidget {
      this.color= Colors.white,
      this.max=1,
     this.height =1,
+    this.spacing=1,
 
   });
 
@@ -29,7 +32,9 @@ class CustomText extends StatelessWidget {
           fontWeight: weight,
           fontSize: size.sp,
           fontFamily: "TenorSans",
-          color: color
+          color: color,
+          letterSpacing: spacing,
+          overflow: TextOverflow.ellipsis,
       ),);
 
   }
