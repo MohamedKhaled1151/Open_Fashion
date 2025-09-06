@@ -27,10 +27,12 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: AppColors.primary,
         appBar: CustomAppBar(
           isBlackk: true,
         ),
+
       body: Stack(
           children: [
             // text

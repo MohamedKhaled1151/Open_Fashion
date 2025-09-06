@@ -6,7 +6,8 @@ import 'package:open_fashion/core/components/colors/colors.dart';
 import 'package:open_fashion/core/components/custom_text.dart';
 
 class CheckoutSummarySection extends StatefulWidget {
-  const CheckoutSummarySection({super.key});
+  const CheckoutSummarySection({super.key, required this.price});
+  final int price;
 
   @override
   State<CheckoutSummarySection> createState() => _CheckoutSummarySectionState();
@@ -45,7 +46,7 @@ class _CheckoutSummarySectionState extends State<CheckoutSummarySection> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                    CustomText(text: "Est. Total",color: AppColors.primary,weight: FontWeight.bold,),
-                  CustomText(text: "\$  240",color: AppColors.priceColor,weight: FontWeight.bold,),
+                  CustomText(text: "\$  ${widget.price}",color: AppColors.priceColor,weight: FontWeight.bold,),
          
                 ],
               )

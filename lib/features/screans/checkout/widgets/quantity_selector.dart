@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class QuantitySelector extends StatefulWidget {
-  const QuantitySelector({super.key});
+  const QuantitySelector({super.key, required this.onChanged});
+  final Function(int) onChanged;
 
   @override
   State<QuantitySelector> createState() => _QuantitySelectorState();
@@ -20,6 +21,7 @@ class _QuantitySelectorState extends State<QuantitySelector> {
             setState(() {
               if (quantity >1 ){
                 quantity --;
+                widget.onChanged(quantity);
               }
             });
           },
@@ -43,6 +45,8 @@ class _QuantitySelectorState extends State<QuantitySelector> {
           onTap: (){
             setState(() {
                 quantity ++;
+                widget.onChanged(quantity);
+
             });
           },
           child: Container(
